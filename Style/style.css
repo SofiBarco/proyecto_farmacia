@@ -4,9 +4,10 @@ body{
     margin: 0%;
 }
 header{
-    background-color: #F1F2F2;
+    /* background-color: #F1F2F2; */
     margin: 0%;
     width: 100%;
+    background-image: linear-gradient(to right, #F1F2F2, #b8c5f0);
 }
 nav { 
     display: flex;
@@ -23,9 +24,18 @@ a {
 nav a {
     font-weight: 800;
     font-family: 'Saira Condensed', sans-serif;
+    padding: .5rem 1rem;
+    transition: 2s;
+ 
 }
 nav a:hover{
     color: black;
+    border-bottom: 2px solid #476796;
+}
+.imagenEncabezado{
+    animation-duration: 3s;
+	animation-name: animacionLogo;
+	animation-iteration-count: 1;
 }
 .menu {
     display: flex;
@@ -38,6 +48,7 @@ nav a:hover{
     /* font-family: 'Roboto Slab', serif; */
 
 }
+
 .imagenBanner {
     display: flex;
     width: 100%;
@@ -117,6 +128,10 @@ div#imagen1 {
     border-radius: 4%;
     
 }
+div#imagen1:hover{
+    background-color:#b8c5f0;
+    filter: brightness(1);
+}
 div#imagen2{
     background-color: #0061CA;
     grid-column: 2 / 3;
@@ -124,6 +139,10 @@ div#imagen2{
     padding: 2px;
     width: 100%;
     border-radius: 4%;
+}
+div#imagen2:hover{
+    background-color:#b8c5f0;
+    filter: brightness(1);    
 }
 div#imagen3{
     background-color: #DF6A0B;
@@ -133,6 +152,10 @@ div#imagen3{
     width: 100%;
     border-radius: 4%;
 }
+div#imagen3:hover{
+    background-color:#b8c5f0;
+    filter: brightness(1);    
+}
 div#imagen4{
     background-color: #0061CA;
     grid-column: 1 / 2;
@@ -140,6 +163,10 @@ div#imagen4{
     padding: 2px;
     width: 100%;
     border-radius: 4%;
+}
+div#imagen4:hover{
+    background-color:#b8c5f0;
+    filter: brightness(1);    
 }
 
 div#imagen5{
@@ -150,6 +177,10 @@ div#imagen5{
     width: 100%;
     border-radius: 4%;
 }
+div#imagen5:hover{
+    background-color:#b8c5f0;
+    filter: brightness(1);    
+}
 
 div#imagen6{
     background-color: #0061CA;
@@ -158,6 +189,10 @@ div#imagen6{
     padding: 2px;
     width: 100%;
     border-radius: 4%;
+}
+div#imagen6:hover{
+    background-color:#b8c5f0;
+    filter: brightness(1);    
 }
 #videos{
     display: flex;
@@ -233,6 +268,23 @@ font-family: 'Saira Condensed', sans-serif;
     font-family: 'Saira Condensed', sans-serif;
 }
 /* FIN NOSOTROS */
+
+/* Animaciones */
+@keyframes animacionLogo{
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotateY(0deg);
+        }
+      50%{
+            -webkit-transform: rotate(180deg);
+            transform: rotateY(180deg);
+        } 
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotateY(360deg);
+            }
+}
+
 @media screen and (max-width: 320px) {
     nav { 
         display: flex;
@@ -409,7 +461,7 @@ font-family: 'Saira Condensed', sans-serif;
         justify-content: center;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 675px) {
     header{
         background-color: #F1F2F2;
         margin: 0%;
