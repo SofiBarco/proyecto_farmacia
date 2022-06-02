@@ -21,11 +21,12 @@ a {
     text-decoration: none;
     color: #0061CA;
 }
-nav a {
+nav.navbar a {
     font-weight: 800;
     font-family: 'Saira Condensed', sans-serif;
     padding: .5rem 1rem;
     transition: 2s;
+    color: #0061CA;
  
 }
 nav a:hover{
@@ -242,10 +243,11 @@ div#imagen6:hover{
 }
 /* CONTACTO */
 .contacto {
- display: flex;
- flex-direction: column;
-margin: 10px;
-font-family: 'Saira Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    font-family: 'Saira Condensed', sans-serif;
 }
 .lista__contacto {
     display: flex;
@@ -266,6 +268,7 @@ font-family: 'Saira Condensed', sans-serif;
 /* NOSOTROS */
 .nosotros {
     font-family: 'Saira Condensed', sans-serif;
+    color:#476796;
 }
 /* FIN NOSOTROS */
 
@@ -479,13 +482,20 @@ font-family: 'Saira Condensed', sans-serif;
         display: flex;
         justify-content: center;
     }
+    /* .presentacion__imagen{
+        display: flex;
+        flex-direction: column;
+    } */
     .presentacion__texto {
+        display: flex;
+        flex-direction: column;
         font-size: 1em;
     }
     .contacto {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        width: 100%;
        }
        .lista__contacto {
            display: flex;
@@ -505,4 +515,19 @@ font-family: 'Saira Condensed', sans-serif;
        .contacto__mapa {
            width: 100%;
        }
+}
+@media screen and (max-width: 425px) {
+    .presentacion__imagen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        width: 75%;
+        
+    }
+    .imagen__presentacion {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
 }
