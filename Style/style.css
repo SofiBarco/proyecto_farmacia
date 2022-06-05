@@ -126,8 +126,7 @@ div#imagen1 {
     grid-row: 1;
     padding: 2px;
     width: 100%;
-    border-radius: 4%;
-    
+    border-radius: 4%;  
 }
 div#imagen1:hover{
     background-color:#b8c5f0;
@@ -140,6 +139,7 @@ div#imagen2{
     padding: 2px;
     width: 100%;
     border-radius: 4%;
+   
 }
 div#imagen2:hover{
     background-color:#b8c5f0;
@@ -384,7 +384,7 @@ div#imagen6:hover{
         grid-template-rows: repeat(5, 400px);
         margin: 10px 10px;
         padding: 10px;
-        width: 95%;
+        width: 100%;
         gap: 30px;
         font-size: 0.8em;
     }
@@ -394,7 +394,6 @@ div#imagen6:hover{
         grid-row: 1;
         padding: 2px;
         width: 100%;
-        
     }
     div#imagen2{
         background-color: #0061CA;
@@ -514,6 +513,9 @@ div#imagen6:hover{
        }
        .contacto__mapa {
            width: 100%;
+       }
+       .contacto__email {
+           font-size: 0.9em;
        }
 }
 @media screen and (max-width: 425px) {
