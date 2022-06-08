@@ -1,0 +1,65 @@
+/* Externos */
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Saira+Condensed&display=swap");
+/* Misc */
+:root {
+  /* colors */
+  --color-principal: #0061CA;
+  --color-secundario: #DF6A0B;
+  --color-base: #F1F2F2;
+  --color-resaltador: #b8c5f0;
+  --color-terciario: #476796;
+  /* font family */
+  --font-principal:  'Saira Condensed', sans-serif;
+  --font-secundary: 'Roboto Slab', serif; }
+
+@keyframes animacionLogo {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotateY(0deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotateY(180deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotateY(360deg); } }
+
+/* pages */
+.nosotros {
+  font-family: var(--font-principal);
+  color: var(--color-terciario); }
+
+.consultas {
+  flex-direction: column; }
+  .consultas .titulo__consultas {
+    font-family: var(--font-principal);
+    color: var(--color-principal); }
+  .consultas .subt__consultas {
+    font-family: var(--font-principal);
+    color: var(--color-principal); }
+  .consultas .subt__consultas {
+    font-family: var(--font-principal);
+    color: #0075CA; }
+  .consultas .descripcion__consultas {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-terciario); }
+
+.texto__formulario {
+  display: flex;
+  flex-direction: column; }
+
+.botones__formulario {
+  display: inline; }
+
+/* partials */
+.piedepagina {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  background-color: #F1F2F2; }
+  .piedepagina .enlaces__piedepagina {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: #F1F2F2; }

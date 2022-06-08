@@ -1,0 +1,27 @@
+.consultas {
+    flex-direction: column;
+    .titulo__consultas {
+        font-family: var(--font-principal);
+        color: var(--color-principal);
+    }
+    .subt__consultas {
+        font-family: var(--font-principal);
+    color: var(--color-principal);
+    }
+    .subt__consultas {
+        font-family: var(--font-principal);
+        color: #0075CA;
+    }
+    .descripcion__consultas {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--color-terciario);
+    }
+}
+
+.texto__formulario {
+    display: flex;
+    flex-direction: column;
+}
+.botones__formulario {
+    display: inline;
+}

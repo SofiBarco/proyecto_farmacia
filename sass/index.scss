@@ -1,0 +1,20 @@
+/* Externos */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Saira+Condensed&display=swap');
+
+/* Misc */ 
+@import './misc/variables.scss';
+@import './misc/animations.scss';
+@import './misc/normalize.scss';
+
+/* pages */
+@import './pages/contacto.scss';
+@import './pages/nosotros.scss';
+@import './pages/preguntas frecuentes.scss';
+@import './pages/productos.scss';
+
+/* partials */
+@import './partials/footer.scss';
+@import './partials/header.scss';
+
+

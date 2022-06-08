@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Saira+Condensed&display=swap');
+
+/* :root {
+
+            /* colors */
+    --color-principal: #0061CA;
+    --color-secundario: #DF6A0B;
+    --color-base: #F1F2F2;
+    --color-resaltador: #b8c5f0;
+    --color-terciario: #476796;
+            /* font family */
+    --font-principal:  'Saira Condensed', sans-serif;
+    --font-secundary: 'Roboto Slab', serif;
+} */
+
+
+
 body{
     margin: 0%;
 }
@@ -7,7 +23,7 @@ header{
     /* background-color: #F1F2F2; */
     margin: 0%;
     width: 100%;
-    background-image: linear-gradient(to right, #F1F2F2, #b8c5f0);
+    background-image: linear-gradient(to right, var(--color-base), var(--color-resaltador));
 }
 nav { 
     display: flex;
@@ -19,14 +35,14 @@ nav {
 }
 a {
     text-decoration: none;
-    color: #0061CA;
+    color: var(--color-principal);
 }
 nav.navbar a {
     font-weight: 800;
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: var(--font-principal);
     padding: .5rem 1rem;
     transition: 2s;
-    color: #0061CA;
+    color: var(--color-principal);
  
 }
 nav a:hover{
@@ -67,26 +83,26 @@ nav a:hover{
 }
 .presentacion__texto {
     margin: 0px 40px;
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: var(--font-principal);
     font-size: 2em;
-    color: #DF6A0B;
+    color: var(--color-secundario);
 
 }
 .piedepagina {
     display: flex;
     flex-direction: row;
     margin: 0px;
-    background-color: #F1F2F2;
+    background-color: var(--color-base);
 }
 .enlaces__piedepagina {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 20px;
-    background-color: #F1F2F2;
+    background-color: var(--color-base);
 }
 .logosocial {
-    background-color: #F1F2F2;
+    background-color: var(--color-base);
     width: 20%;
 }
 /* PRODUCTOS */
@@ -104,7 +120,7 @@ nav a:hover{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, 400px);
     gap: 30px;
-    font-family:'Roboto Slab', serif;
+    font-family: var(--font-secundary);
     padding: 35px;
     margin-right: 10px;
     font-size: 1em;
@@ -112,7 +128,7 @@ nav a:hover{
 }
 .subtitulo_imagen{
     color: bisque;
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: var(--font-principal);
     margin-left: 15px;
 }
 .productos{
@@ -121,7 +137,7 @@ nav a:hover{
 }
 
 div#imagen1 {
-    background-color: #DF6A0B;
+    background-color: var(--color-secundario);
     grid-column: 1 / 2;
     grid-row: 1;
     padding: 2px;
@@ -129,11 +145,11 @@ div#imagen1 {
     border-radius: 4%;  
 }
 div#imagen1:hover{
-    background-color:#b8c5f0;
+    background-color: var(--color-resaltador);
     filter: brightness(1);
 }
 div#imagen2{
-    background-color: #0061CA;
+    background-color: var(--color-principal);
     grid-column: 2 / 3;
     grid-row: 1;
     padding: 2px;
@@ -142,11 +158,11 @@ div#imagen2{
    
 }
 div#imagen2:hover{
-    background-color:#b8c5f0;
+    background-color: var(--color-resaltador);
     filter: brightness(1);    
 }
 div#imagen3{
-    background-color: #DF6A0B;
+    background-color: var(--color-secundario);
     grid-column: 3 / 4;
     grid-row: 1;
     padding: 2px;
@@ -154,11 +170,11 @@ div#imagen3{
     border-radius: 4%;
 }
 div#imagen3:hover{
-    background-color:#b8c5f0;
+    background-color: var(--color-resaltador);
     filter: brightness(1);    
 }
 div#imagen4{
-    background-color: #0061CA;
+    background-color: var(--color-principal);
     grid-column: 1 / 2;
     grid-row: 2;
     padding: 2px;
@@ -166,12 +182,12 @@ div#imagen4{
     border-radius: 4%;
 }
 div#imagen4:hover{
-    background-color:#b8c5f0;
+    background-color: var(--color-resaltador);
     filter: brightness(1);    
 }
 
 div#imagen5{
-    background-color: #DF6A0B;
+    background-color: var(--color-secundario);
     grid-column: 2 / 3;
     grid-row: 2;
     padding: 2px;
@@ -179,12 +195,12 @@ div#imagen5{
     border-radius: 4%;
 }
 div#imagen5:hover{
-    background-color:#b8c5f0;
+    background-color: var(--color-resaltador);
     filter: brightness(1);    
 }
 
 div#imagen6{
-    background-color: #0061CA;
+    background-color: var(--color-principal);
     grid-column: 3 / 4;
     grid-row: 2;
     padding: 2px;
@@ -192,7 +208,7 @@ div#imagen6{
     border-radius: 4%;
 }
 div#imagen6:hover{
-    background-color:#b8c5f0;
+    background-color: var(--color-resaltador);
     filter: brightness(1);    
 }
 #videos{
@@ -219,20 +235,20 @@ div#imagen6:hover{
 }
 
 /* FIN PRODUCTOS */
-.consultas {
+/* .consultas {
     flex-direction: column;
 }
 .titulo__consultas {
-    font-family: 'Saira Condensed', sans-serif;
-    color: #0061CA;
+    font-family: var(--font-principal);
+    color: var(--color-principal);
 }
 .subt__consultas {
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: var(--font-principal);
     color: #0075CA;
 }
 .descripcion__consultas {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #476796;
+    color: var(--color-terciario);
 }
 .texto__formulario {
     display: flex;
@@ -240,14 +256,14 @@ div#imagen6:hover{
 }
 .botones__formulario {
     display: inline;
-}
+} */
 /* CONTACTO */
 .contacto {
     display: flex;
     flex-direction: column;
     margin: 10px;
     width: 100%;
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: var(--font-principal);
 }
 .lista__contacto {
     display: flex;
@@ -260,20 +276,20 @@ div#imagen6:hover{
     width: 20%;
 }
 .contacto__ubicacionymail {
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: var(--font-principal);
     font-size: 2em;
 }
 /* FIN CONTACTO*/
 
 /* NOSOTROS */
 .nosotros {
-    font-family: 'Saira Condensed', sans-serif;
-    color:#476796;
+    font-family: var(--font-principal);
+    color: var(--color-terciario);
 }
 /* FIN NOSOTROS */
 
 /* Animaciones */
-@keyframes animacionLogo{
+/* @keyframes animacionLogo{
         from {
             -webkit-transform: rotate(0deg);
             transform: rotateY(0deg);
@@ -286,13 +302,13 @@ div#imagen6:hover{
             -webkit-transform: rotate(360deg);
             transform: rotateY(360deg);
             }
-}
+} */
 
 @media screen and (max-width: 320px) {
     nav { 
         display: flex;
         flex-direction: column;
-        background-color: #F1F2F2;
+        background-color: var(--color-base);
         width: 100%;
     }
     .imagenEncabezado{
@@ -332,9 +348,9 @@ div#imagen6:hover{
         display: flex;
         justify-content: center;
         margin: 0px 10px;
-        font-family: 'Saira Condensed', sans-serif;
+        font-family: var(--font-principal);
         font-size: 0.8em;
-        color: #DF6A0B;
+        color: var(--color-secundario);
     
     }
     .contacto {
@@ -364,7 +380,7 @@ div#imagen6:hover{
 }
 @media screen and (max-width: 1050px) {
     header{
-        background-color: #F1F2F2;
+        background-color: var(--color-base);
         margin: 0%;
         width: 100%;
     }
@@ -372,7 +388,7 @@ div#imagen6:hover{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        background-color: #F1F2F2;
+        background-color: var(--color-base);
         width: 100%;
     }
     .imagenEncabezado{
@@ -389,28 +405,28 @@ div#imagen6:hover{
         font-size: 0.8em;
     }
     div#imagen1 {
-        background-color: #DF6A0B;
+        background-color: var(--color-secundario);
         grid-column: 1 / 2;
         grid-row: 1;
         padding: 2px;
         width: 100%;
     }
     div#imagen2{
-        background-color: #0061CA;
+        background-color: var(--color-principal);
         grid-column: 2 / 3;
         grid-row: 1;
         padding: 2px;
         width: 100%;
     }
     div#imagen3{
-        background-color: #DF6A0B;
+        background-color: var(--color-secundario);
         grid-column: 1 / 2;
         grid-row: 2;
         padding: 2px;
         width: 100%;
     }
     div#imagen4{
-        background-color: #0061CA;
+        background-color: var(--color-principal);
         grid-column: 2 / 3;
         grid-row: 2;
         padding: 2px;
@@ -418,7 +434,7 @@ div#imagen6:hover{
     }
     
     div#imagen5{
-        background-color: #DF6A0B;
+        background-color: var(--color-secundario);
         grid-column: 1 / 2;
         grid-row: 3;
         padding: 2px;
@@ -426,7 +442,7 @@ div#imagen6:hover{
     }
     
     div#imagen6{
-        background-color: #0061CA;
+        background-color: var(--color-principal);
         grid-column: 2 / 3;
         grid-row: 3;
         padding: 2px;
@@ -465,7 +481,7 @@ div#imagen6:hover{
 }
 @media screen and (max-width: 675px) {
     header{
-        background-color: #F1F2F2;
+        background-color: var(--color-base);
         margin: 0%;
         width: 100%;
     }
