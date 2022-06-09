@@ -548,4 +548,12 @@ div#imagen6:hover{
         align-items: center;
         width: 100%;
     }
+    .grid_area{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 0.8em;
+        flex-flow: row wrap;
+        width: 95%;
+    }
 }
