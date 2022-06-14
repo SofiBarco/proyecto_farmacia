@@ -1,0 +1,25 @@
+.contacto {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    font-family: var(--font-principal);
+    .lista__contacto {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .items__contacto {
+        // display: flex;
+        // flex-direction: column;
+        @extend .lista__contacto;
+        margin: 0;
+        width: 20%;
+    }
+    }
+    .contacto__ubicacionymail {
+        font-family: var(--font-principal);
+        font-size: 2em;
+    }
+
+

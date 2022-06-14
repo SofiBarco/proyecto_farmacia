@@ -1,4 +1,4 @@
 .nosotros {
     font-family: var(--font-principal);
-    color: var(--color-terciario);
+    color: map-get($colors, color-terciario);
 }

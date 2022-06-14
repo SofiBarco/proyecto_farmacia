@@ -1,0 +1,114 @@
+.grid_area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 400px);
+    gap: 30px;
+    font-family: var(--font-secundary);
+    padding: 35px;
+    margin-right: 10px;
+    font-size: 1em;
+    width: 95%;
+}
+.subtitulo_imagen{
+    color: bisque;
+    font-family: var(--font-principal);
+    margin-left: 15px;
+}
+.productos{
+    display: flex;
+    justify-content: center;
+}
+
+div#imagen1 {
+    background-color: map-get($colors, color-secundario);
+    grid-column: 1 / 2;
+    grid-row: 1;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4%; 
+    &:hover{
+        background-color: map-get($colors, color-resaltador);
+        filter: brightness(1);
+    } 
+}
+div#imagen2{
+    background-color: map-get($colors, color-principal);
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4%;
+   &:hover{
+    background-color: map-get($colors, color-resaltador);
+    filter: brightness(1);    
+}
+}
+div#imagen3{
+    background-color:  map-get($colors, color-secundario);
+    grid-column: 3 / 4;
+    grid-row: 1;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4%;
+    &:hover{
+        background-color: map-get($colors, color-resaltador);
+        filter: brightness(1);    
+    }
+}
+
+div#imagen4{
+    background-color: map-get($colors, color-principal);
+    grid-column: 1 / 2;
+    grid-row: 2;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4%;
+    &:hover{
+        background-color: map-get($colors, color-resaltador);
+        filter: brightness(1);    
+    }
+}
+div#imagen5{
+    background-color:  map-get($colors, color-secundario);
+    grid-column: 2 / 3;
+    grid-row: 2;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4%;
+    &:hover{
+        background-color: map-get($colors, color-resaltador);
+        filter: brightness(1);    
+    }
+}
+div#imagen6{
+    background-color:map-get($colors, color-principal);
+    grid-column: 3 / 4;
+    grid-row: 2;
+    padding: 2px;
+    width: 100%;
+    border-radius: 4%;
+    &:hover{
+        background-color: map-get($colors, color-resaltador);
+        filter: brightness(1);    
+    }
+}
+#videos{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.video1{
+    grid-column: 1 / 2;
+    grid-row: 3;
+    width: 50%;
+}
+.video2{
+    grid-column: 2 / 3;
+    grid-row: 3;
+    width:100%;
+}
+.video3{
+    grid-column: 3 / 4;
+    grid-row: 3;
+    width:50%;
+}

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Saira+Condensed&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Saira+Condensed&display=swap'); */
 
 /* :root {
 
@@ -16,21 +16,21 @@
 
 
 
-body{
+/* body{
     margin: 0%;
-}
-header{
+} */
+/* header{
     /* background-color: #F1F2F2; */
-    margin: 0%;
+    /* margin: 0%;
     width: 100%;
     background-image: linear-gradient(to right, var(--color-base), var(--color-resaltador));
-}
-nav { 
+} */ */
+/* nav { 
     display: flex;
     flex-direction: row;
     min-height: 70%;
-    width: 100%;
-    /* background-color: #F1F2F2; */
+    width: 100%; */
+    /* background-color: #F1F2F2;
     justify-content: space-between;  
 }
 a {
@@ -48,8 +48,8 @@ nav.navbar a {
 nav a:hover{
     color: black;
     border-bottom: 2px solid #476796;
-}
-.imagenEncabezado{
+} */
+/* .imagenEncabezado{
     animation-duration: 3s;
 	animation-name: animacionLogo;
 	animation-iteration-count: 1;
@@ -64,9 +64,9 @@ nav a:hover{
     margin: 20px 50px;
     /* font-family: 'Roboto Slab', serif; */
 
-}
+} */
 
-.imagenBanner {
+/* .imagenBanner {
     display: flex;
     width: 100%;
 }
@@ -87,8 +87,8 @@ nav a:hover{
     font-size: 2em;
     color: var(--color-secundario);
 
-}
-.piedepagina {
+} */
+/* .piedepagina {
     display: flex;
     flex-direction: row;
     margin: 0px;
@@ -100,11 +100,11 @@ nav a:hover{
     justify-content: space-around;
     margin: 20px;
     background-color: var(--color-base);
-}
-.logosocial {
+} */
+/* .logosocial {
     background-color: var(--color-base);
     width: 20%;
-}
+} */
 /* PRODUCTOS */
 /* .productos {
     size: 100%;
@@ -115,7 +115,7 @@ nav a:hover{
 /* #videos{
  display: flex;
 } */
-.grid_area{
+/* .grid_area{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, 400px);
@@ -232,7 +232,7 @@ div#imagen6:hover{
     grid-column: 3 / 4;
     grid-row: 3;
     width:50%;
-}
+} */
 
 /* FIN PRODUCTOS */
 /* .consultas {
@@ -258,7 +258,7 @@ div#imagen6:hover{
     display: inline;
 } */
 /* CONTACTO */
-.contacto {
+/* .contacto {
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -278,14 +278,14 @@ div#imagen6:hover{
 .contacto__ubicacionymail {
     font-family: var(--font-principal);
     font-size: 2em;
-}
+} */
 /* FIN CONTACTO*/
 
 /* NOSOTROS */
-.nosotros {
+/* .nosotros {
     font-family: var(--font-principal);
     color: var(--color-terciario);
-}
+} */
 /* FIN NOSOTROS */
 
 /* Animaciones */

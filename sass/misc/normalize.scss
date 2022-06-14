@@ -1,1 +1,28 @@
+body{
+    margin: 0%;
+}
 
+nav { 
+    display: flex;
+    flex-direction: row;
+    min-height: 70%;
+    width: 100%;
+    /* background-color: #F1F2F2; */
+    justify-content: space-between;
+    &.navbar a {
+        font-weight: 800;
+        font-family: var(--font-principal);
+        padding: .5rem 1rem;
+        transition: 2s;
+        color: map-get($colors, color-principal);
+     
+    }
+   & a:hover{
+        color: black;
+        border-bottom: 2px solid map-get($colors, color-terciario);
+    }
+}
+a {
+    text-decoration: none;
+    color: map-get($colors, color-principal);
+}

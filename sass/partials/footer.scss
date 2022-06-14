@@ -2,12 +2,16 @@
     display: flex;
     flex-direction: row;
     margin: 0px;
-    background-color: #F1F2F2;
+    background-color: map-get($colors, color-base);
     .enlaces__piedepagina {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         margin: 20px;
-        background-color: #F1F2F2;
+        background-color: map-get($colors, color-base);
     }
+    }
+    .logosocial {
+        background-color: var(--color-base);
+        width: 20%;
     }

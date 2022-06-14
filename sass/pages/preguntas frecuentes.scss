@@ -2,19 +2,19 @@
     flex-direction: column;
     .titulo__consultas {
         font-family: var(--font-principal);
-        color: var(--color-principal);
+        color: map-get($colors, color-principal);
     }
     .subt__consultas {
         font-family: var(--font-principal);
-    color: var(--color-principal);
+    color: map-get($colors, color-principal);
     }
     .subt__consultas {
         font-family: var(--font-principal);
-        color: #0075CA;
+        color: map-get($colors, color-principal);
     }
     .descripcion__consultas {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: var(--color-terciario);
+        color: map-get($colors, color-terciario);
     }
 }
 

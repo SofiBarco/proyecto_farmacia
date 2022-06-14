@@ -1,12 +1,24 @@
-:root {
+
 
     /* colors */
---color-principal: #0061CA;
---color-secundario: #DF6A0B;
---color-base: #F1F2F2;
---color-resaltador: #b8c5f0;
---color-terciario: #476796;
-    /* font family */
---font-principal:  'Saira Condensed', sans-serif;
---font-secundary: 'Roboto Slab', serif;
+$colors: (
+color-principal: #0061CA,
+color-secundario: #DF6A0B,
+color-base: #F1F2F2,
+color-resaltador: #b8c5f0,
+color-terciario: #476796
+);
+@each $color, $value in $colors {
+    .#{$color}{
+        color: #{$value};
+    }
+    
 }
+    /* font family */
+:root {
+    --font-principal: 'Saira Condensed', sans-serif;
+    --font-secundary: 'Roboto Slab', serif;
+    
+}
+
+

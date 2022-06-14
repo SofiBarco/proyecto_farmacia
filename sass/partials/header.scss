@@ -1,0 +1,43 @@
+header{
+    /* background-color: #F1F2F2; */
+    margin: 0%;
+    width: 100%;
+    background-image: linear-gradient(to right, map-get($colors, color-base), map-get($colors, color-resaltador));
+}
+
+.imagenEncabezado{
+    animation-duration: 3s;
+	animation-name: animacionLogo;
+	animation-iteration-count: 1;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    .menu__enlace {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 50px;    
+    }
+}
+.imagenBanner {
+    display: flex;
+    width: 100%;
+}
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .presentacion__imagen {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 50px 20px;
+    }
+    .presentacion__texto {
+        margin: 0px 40px;
+        font-family: var(--font-principal);
+        font-size: 2em;
+        color: map-get($colors, color-secundario);
+    
+    }
+}
