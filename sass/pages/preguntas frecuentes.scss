@@ -19,8 +19,8 @@
 }
 
 .texto__formulario {
-    display: flex;
-    flex-direction: column;
+    @include flex (column);
+    
 }
 .botones__formulario {
     display: inline;

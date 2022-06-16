@@ -1,6 +1,5 @@
 .contacto {
-    display: flex;
-    flex-direction: column;
+    @include flex (column);
     margin: 10px;
     width: 100%;
     font-family: var(--font-principal);
@@ -10,8 +9,6 @@
         margin: 20px;
     }
     .items__contacto {
-        // display: flex;
-        // flex-direction: column;
         @extend .lista__contacto;
         margin: 0;
         width: 20%;
