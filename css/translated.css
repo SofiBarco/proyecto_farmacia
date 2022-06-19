@@ -58,6 +58,200 @@ a {
   text-decoration: none;
   color: #0061CA; }
 
+@media screen and (max-width: 320px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F2F2;
+    width: 100%; }
+    nav .imagenEncabezado {
+      width: 100%;
+      height: auto; }
+  #navbarNav .menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em; }
+  main .grid_area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8em;
+    flex-flow: row wrap;
+    width: 95%; }
+  section .imagenBanner {
+    display: flex;
+    width: 100%; }
+  main .presentacion .presentacion__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 36px;
+    width: 80%; }
+  main .presentacion .imagen__presentacion {
+    display: flex;
+    width: 100%; }
+  main .presentacion .presentacion__texto {
+    display: flex;
+    justify-content: center;
+    margin: 0px 10px;
+    font-family: var(--font-principal);
+    font-size: 0.8em;
+    color: #DF6A0B; }
+  main .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    main .contacto .lista__contacto, main .contacto .items__contacto {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+    main .contacto .items__contacto {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+  main .contacto__ubicacionymail {
+    font-size: 0.8em; }
+    main .contacto__ubicacionymail .contacto__mapa {
+      width: 100%; } }
+
+@media screen and (max-width: 1050px) {
+  header {
+    background-color: #F1F2F2;
+    margin: 0%;
+    width: 100%; }
+    header nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: #F1F2F2;
+      width: 100%; }
+      header nav .imagenEncabezado {
+        width: 100%;
+        height: auto; }
+  main .grid_area {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 400px);
+    margin: 10px 10px;
+    padding: 10px;
+    width: 100%;
+    gap: 30px;
+    font-size: 0.8em; }
+    main .grid_area div#imagen1 {
+      background-color: #DF6A0B;
+      grid-column: 1 / 2;
+      grid-row: 1;
+      padding: 2px;
+      width: 100%; }
+    main .grid_area div#imagen2 {
+      background-color: #0061CA;
+      grid-column: 2 / 3;
+      grid-row: 1;
+      padding: 2px;
+      width: 100%; }
+    main .grid_area div#imagen3 {
+      background-color: #DF6A0B;
+      grid-column: 1 / 2;
+      grid-row: 2;
+      padding: 2px;
+      width: 100%; }
+    main .grid_area div#imagen4 {
+      background-color: #0061CA;
+      grid-column: 2 / 3;
+      grid-row: 2;
+      padding: 2px;
+      width: 100%; }
+    main .grid_area div#imagen5 {
+      background-color: #DF6A0B;
+      grid-column: 1 / 2;
+      grid-row: 3;
+      padding: 2px;
+      width: 100%; }
+    main .grid_area div#imagen6 {
+      background-color: #0061CA;
+      grid-column: 2 / 3;
+      grid-row: 3;
+      padding: 2px;
+      width: 100%; }
+    main .grid_area .productos {
+      display: flex;
+      justify-content: center; }
+    main .grid_area .subtitulo_imagen {
+      display: flex;
+      justify-content: center; }
+  .grid_area #videos {
+    display: flex;
+    justify-content: center;
+    background-color: white; }
+    .grid_area #videos .video1 {
+      grid-column: 1 / 2;
+      grid-row: 4;
+      width: 50%; }
+    .grid_area #videos .video2 {
+      grid-column: 2 / 3;
+      grid-row: 4;
+      width: 100%; }
+    .grid_area #videos .video3 {
+      grid-column: 2;
+      grid-row: 5;
+      width: 50%; } }
+
+@media screen and (max-width: 675px) {
+  header {
+    background-color: #F1F2F2;
+    margin: 0%;
+    width: 100%; }
+    header nav {
+      display: flex;
+      justify-content: center; }
+      header nav .imagenEncabezado {
+        width: 100%; }
+  #navbarNav .menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em; }
+  main .presentacion .presentacion__texto {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em; }
+  main .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; }
+    main .contacto .lista__contacto, main .contacto .items__contacto {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+    main .contacto .items__contacto {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+  main .contacto__ubicacionymail {
+    font-size: 0.9em; }
+    main .contacto__ubicacionymail .contacto__mapa {
+      width: 100%; }
+    main .contacto__ubicacionymail .contacto__email {
+      font-size: 0.9em; } }
+
+@media screen and (max-width: 425px) {
+  main .presentacion .presentacion__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 75%; }
+  main .presentacion .imagen__presentacion {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+  main .grid_area {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 0.8em;
+    flex-flow: row wrap;
+    width: 95%; } }
+
 /* pages */
 .contacto {
   display: flex;
