@@ -317,6 +317,20 @@ a {
   display: flex;
   justify-content: center; }
 
+.buttonCpra {
+  margin: 10px 0;
+  background-color: #DF6A0B;
+  color: #F1F2F2;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; }
+  .buttonCpra:hover {
+    background-color: #b8c5f0;
+    box-shadow: 1px, 1px, 10px, gainsboro; }
+
 div#imagen1 {
   background-color: #DF6A0B;
   grid-column: 1 / 2;

@@ -19,6 +19,22 @@
     justify-content: center;
 }
 
+.buttonCpra{
+    margin: 10px 0;
+    background-color:map-get($colors, color-secundario);
+    color: map-get($colors, color-base);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: map-get($colors, color-resaltador);
+        box-shadow: (1px, 1px, 10px, gainsboro);
+}
+}
+
 div#imagen1 {
     background-color: map-get($colors, color-secundario);
     grid-column: 1 / 2;
@@ -92,6 +108,7 @@ div#imagen6{
         filter: brightness(1);    
     }
 }
+
 #videos{
     display: flex;
     justify-content: center;
