@@ -1,7 +1,7 @@
 .grid_area{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 400px);
+    grid-template-rows: repeat(3, 600 px);
     gap: 30px;
     font-family: var(--font-secundary);
     padding: 35px;
@@ -20,17 +20,22 @@
 }
 
 .buttonCpra{
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: flex-start;
+    position: relative;
     margin: 10px 0;
-    background-color:map-get($colors, color-secundario);
+    background-color: #512E5F;
     color: map-get($colors, color-base);
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 10px;
+    font-weight: 300;
     padding: 10px 15px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     &:hover {
-        background-color: map-get($colors, color-resaltador);
+        background-color: map-get($colors, color-base) ;
+        color: #512E5F;
         box-shadow: (1px, 1px, 10px, gainsboro);
 }
 }
@@ -39,7 +44,7 @@ div#imagen1 {
     background-color: map-get($colors, color-secundario);
     grid-column: 1 / 2;
     grid-row: 1;
-    padding: 2px;
+    padding: 20px;
     width: 100%;
     border-radius: 4%; 
     &:hover{
@@ -76,7 +81,7 @@ div#imagen4{
     background-color: map-get($colors, color-principal);
     grid-column: 1 / 2;
     grid-row: 2;
-    padding: 2px;
+    padding: 20px;
     width: 100%;
     border-radius: 4%;
     &:hover{
