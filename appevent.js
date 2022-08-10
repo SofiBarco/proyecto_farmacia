@@ -3,7 +3,13 @@
 let formulario = document.getElementsByClassName('contacto')[0]
 
 
-const todosLosClientes = []
+let todosLosClientes
+if(localStorage.getItem('todosLosClientes')){
+    todosLosClientes = JSON.parse(localStorage.getItem('todosLosClientes'))
+} else {
+    todosLosClientes = []
+}
+
 
 formulario.onsubmit = (e) => {
     e.preventDefault();
@@ -18,13 +24,20 @@ formulario.onsubmit = (e) => {
         password : password.value
     }
     todosLosClientes.push(cliente) 
+    localStorage.setItem('todosLosClientes', JSON.stringify(todosLosClientes))
     vaciarForm()
+    
+console.log(todosLosClientes)
 
-    console.log (todosLosClientes)
+
 }
+
+const todosLosClientesGuardado = JSON.parse(localStorage.getItem('todosLosClientes'))
+console.log(todosLosClientesGuardado)
 
 const vaciarForm = () => {
     nombre.value = ' '
     email.value = ' '
     password.value = ' '
 }
+
