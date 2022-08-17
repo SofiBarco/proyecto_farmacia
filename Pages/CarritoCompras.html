@@ -9,7 +9,7 @@
     <title>Farmacia La Guardia HOME</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/translated.css">
+    <link rel="stylesheet" href="../css/translated.css">
     
 </head>
 <body>
@@ -17,7 +17,7 @@
      <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <picture>
-                <img class="imagenEncabezado container" src="./Img/345075-farmacia-la-guardia-logo.png" alt="Imagen">
+                <img class="imagenEncabezado container" src="../Img/345075-farmacia-la-guardia-logo.png" alt="Imagen">
             </picture>
             <div class="container-fluid">
                 
@@ -27,37 +27,33 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav menu">
                   <li class="nav-item menu__enlace">
-                    <a class="nav-link menu__nosotros" aria-current="page" href="./Pages/Nosotros.html">Nosotros</a>
+                    <a class="nav-link menu__nosotros" aria-current="page" href="Nosotros.html">Nosotros</a>
                   </li>
                   <li class="nav-item menu__enlace">
-                    <a class="nav-link menu__productos" href="./Pages/Productos.html">Productos</a>
+                    <a class="nav-link menu__productos" href="Productos.html">Productos</a>
                   </li>
                   <li class="nav-item menu__enlace">
-                    <a class="nav-link menu__preguntasFrecuentes" href="./Pages/Preguntas Frecuentes.html">Consultas</a>
+                    <a class="nav-link menu__preguntasFrecuentes" href="Preguntas Frecuentes.html">Consultas</a>
                   </li>
                   <li class="nav-item menu__enlace">
-                    <a class="nav-link menu__contacto" href="./Pages/Contacto.html">Contacto</a>
+                    <a class="nav-link menu__contacto" href="Contacto.html">Contacto</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-    <section>
-        <img class="imagenBanner" src="./Img/345071-farmacia-la-guardia-banner.jpg" alt="Banner" >
-    </section>
 </header>
 <!-- FIN DEL HEADER-->
     <main class="container">
 <section class="presentacion">
-    <article class="presentacion__imagen">
-        <img class="imagen__presentacion" src="./Img/345072-farmacia-la-guardia-frascos-con-pastillas.jpg" alt="Frasco de pastillas">
-        <p class="presentacion__texto"> Aquí podrás encontrar todos los medicamentos que necesites</p>
-    </article>
-    <article class="presentacion__imagen">
-        <img class="imagen__presentacion" src="./Img/345074-farmacia-la-guardia-hombre-con-frasco-de-pastillas.jpg" alt="Hombre con frasco">
-        <p class="presentacion__texto"> También contamos con profesionales calificados para la creación de preparados magistrales </p>
-    </article>
-
+    <div id="productoSeleccionado" class="cardProductos" style="width: 15 rem;">
+        <img class="cardImg" src=" " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-name">Producto seleccionado</h5>
+          <p class="card-precio">Precio</p>
+          <button class="buttonCpra btnQuitar btn-primary">Quitar del carrito</button> 
+        </div>
+      </div>
 </section>
 
     </main>
@@ -65,14 +61,14 @@
 <!-- FOOTER DE LA PAGINA-->    
     <footer class="piedepagina">
         <nav>
-            <a class="enlaces__piedepagina" href="https://www.facebook.com/profile.php?id=100040529724124&sk=about"><img class="logosocial" src="./Img/face.png" alt="facebook"></a>
-            <a class="enlaces__piedepagina" href="https://www.instagram.com/farmacialaguardia/"><img class="logosocial" src="./Img/insta.png" alt="Instagram"></a>
+            <a class="enlaces__piedepagina" href="https://www.facebook.com/profile.php?id=100040529724124&sk=about"><img class="logosocial" src="../Img/face.png" alt="facebook"></a>
+            <a class="enlaces__piedepagina" href="https://www.instagram.com/farmacialaguardia/"><img class="logosocial" src="../Img/insta.png" alt="Instagram"></a>
         </nav>
 
     </footer>
     <!-- JavaScript Bundle with Popper -->
     
-    
+<script src="../app.js"></script>   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>

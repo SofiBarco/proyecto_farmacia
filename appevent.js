@@ -1,6 +1,6 @@
 
 
-let formulario = document.getElementsByClassName('contacto')[0]
+let formulario = document.getElementById('formContacto')
 
 
 let todosLosClientes
