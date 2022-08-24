@@ -108,10 +108,10 @@ class ProductoFarmacia {
 
 const producto1 = new ProductoFarmacia(1020, '../Img/mascaras1.jpg', 'Mascaras', 'Son máscaras q le aportan a la piel lo que necesita para estar humectada y fresca. Se retiran luego de dejar actuar 10 minutos con un algodón húmedo', 500)
 const producto2 = new ProductoFarmacia(1021, '../Img/serum.jpg', ' Serum', 'Serum,  ideales para quitar manchas que dejó el verano y cerrar poros', 1600)
-const producto3 = new ProductoFarmacia(1022, '../Img/vitaminas.jpg', ' VitaminaC', 'Fortalece tu sistema inmune' , 1500) 
-const producto4 = new ProductoFarmacia(1023, '../Img/bbcream.jpg', ' BbCream', 'Crema anti age, protección y color. Todo en una!' , 1800)
+const producto3 = new ProductoFarmacia(1022, '../Img/vitaminas.jpg', ' VitaminaC', 'Fortalece tu sistema inmune' , 1000) 
+const producto4 = new ProductoFarmacia(1023, '../Img/bbcream.jpg', ' BbCream', 'Crema anti age, protección y color. Todo en una!' , 2800)
 const producto5 = new ProductoFarmacia(1024, '../Img/geldeseda.jpg', ' GelDeSeda', 'Gel de seda con un tacto increíble con los beneficios del dermotensiv que es un activo contra toda la contracción que produce las arrugas. Efecto botóx.' , 1200)
-const producto6 = new ProductoFarmacia(1025, '../Img/geldespigment.jpg', ' GelDespigmentante', 'Para todo tipo de pieles, secas, mixtas, normales y grasas con pigmentaciones por: Embarazo, anticonceptivos y radiaciones solares excesivas.' , 1000)
+const producto6 = new ProductoFarmacia(1025, '../Img/geldespigment.jpg', ' GelDespigmentante', 'Para todo tipo de pieles, secas, mixtas, normales y grasas con pigmentaciones por: Embarazo, anticonceptivos y radiaciones solares excesivas.' , 1800)
 
 const ProductosFarmacia = [producto1, producto2, producto3, producto4, producto5, producto6]
 
@@ -128,16 +128,12 @@ const cardPrecio = document.querySelector('.card-precio')
 
 const btnQuitar = document.querySelector('.btnQuitar')
 
-const guardarEnStorage = (nombre, valor) => {
-    localStorage.setItem(nombre, JSON.stringify(valor))
-}
 
 
 const renderizarDatosProductos = (e) => {
     const productoIdSeleccionado = e.target.closest('.buttonCpra').getAttribute('data-id')
     const productoElegido = ProductosFarmacia.find((producto) => producto.id == productoIdSeleccionado)
-   
-        console.log(productoElegido)
+    console.log(productoElegido)
     }
 
 
