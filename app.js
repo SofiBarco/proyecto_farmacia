@@ -133,7 +133,10 @@ const btnQuitar = document.querySelector('.btnQuitar')
 const renderizarDatosProductos = (e) => {
     const productoIdSeleccionado = e.target.closest('.buttonCpra').getAttribute('data-id')
     const productoElegido = ProductosFarmacia.find((producto) => producto.id == productoIdSeleccionado)
-    console.log(productoElegido)
+
+    cardImg.setAttribute('src', productoElegido.img)
+    cardName.textContent = productoElegido.nombre
+    cardPrecio.textContent = productoElegido.precio
     }
 
 
