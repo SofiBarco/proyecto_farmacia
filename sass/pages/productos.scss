@@ -9,6 +9,14 @@
     font-size: 1em;
     width: 95%;
 }
+.searchBox {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10%;
+    margin-right: 15%;
+}
 .subtitulo_imagen{
     color: bisque;
     font-family: var(--font-principal);
@@ -20,6 +28,27 @@
 }
 
 .buttonCpra{
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: flex-start;
+    position: relative;
+    margin: 10px 0;
+    background-color: #512E5F;
+    color: map-get($colors, color-base);
+    font-size: 10px;
+    font-weight: 300;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: map-get($colors, color-base) ;
+        color: #512E5F;
+        box-shadow: (1px, 1px, 10px, gainsboro);
+}
+}
+
+.btnQuitar{
     display: flex;
     flex-wrap: wrap;
     //justify-content: flex-start;
