@@ -111,3 +111,158 @@ const producto3 = new ProductoFarmacia(1022, '../Img/vitaminas.jpg', ' VitaminaC
 const producto4 = new ProductoFarmacia(1023, '../Img/bbcream.jpg', ' BbCream', 'Crema anti age, protección y color. Todo en una!' , 2800)
 const producto5 = new ProductoFarmacia(1024, '../Img/geldeseda.jpg', ' GelDeSeda', 'Gel de seda con un tacto increíble con los beneficios del dermotensiv que es un activo contra toda la contracción que produce las arrugas. Efecto botóx.' , 1200)
 const producto6 = new ProductoFarmacia(1025, '../Img/geldespigment.jpg', ' GelDespigmentante', 'Para todo tipo de pieles, secas, mixtas, normales y grasas con pigmentaciones por: Embarazo, anticonceptivos y radiaciones solares excesivas.' , 1800)*/
+
+
+
+
+app carrito de carrito De Compras
+
+let ProductosFarmacia = []
+
+
+const productoSeleccionado = document.querySelector('#productoSeleccionado')
+
+const btnAgregar = document.querySelectorAll('.buttonCpra')
+
+//const cardProductos = document.querySelector('.cardProductos')
+const cardImg = document.querySelector('.cardImg')
+const cardBody = document.querySelector('.card-body')
+const cardName = document.querySelector('.card-name')
+const cardPrecio = document.querySelector('.card-precio')
+
+const searchBar = document.querySelector('#searchBar')
+const searchButton = document.querySelector('#searchButton')
+
+const btnQuitar = document.querySelector('.btnQuitar')
+
+let carritoDeCompras = []
+
+//const guardarEnStorage = (nombre, valor) => {
+  //  localStorage.setItem(nombre, JSON.stringify(valor))
+//}
+
+const renderizarDatosProductos = (e) => {
+    const productoIdSeleccionado = e.target.closest('.buttonCpra').getAttribute('data-id')
+    const productoElegido = ProductosFarmacia.find((producto) => producto.id == productoIdSeleccionado)
+    if (localStorage.getItem('carritoDeCompras')) {
+        carritoDeCompras = JSON.parse(localStorage.getItem('carritoDeCompras'))
+        //carritoDeCompras.push(productoElegido)
+        //guardarEnStorage ('carritoDeCompras', carritoDeCompras)
+    } else {
+        carritoDeCompras = []
+    } 
+   
+    carritoDeCompras.push(productoIdSeleccionado)
+   
+    localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
+        
+    const todosLosProductosGuardado = JSON.parse(localStorage.getItem('carritoDeCompras'))
+    console.log(todosLosProductosGuardado)
+
+        //const todosLosProductosGuardado = JSON.parse(localStorage.getItem('carritoDeCompras'))
+//console.log(todosLosProductosGuardado)
+
+    cardImg.setAttribute('src', productoElegido.img)
+    cardName.textContent = productoElegido.nombre
+    cardPrecio.textContent = `$ ${productoElegido.precio}`
+    
+}
+
+   /* const ProductosEnCarrito = () => {
+        cardProductos.innerHTML = ''
+    carritoDeCompras.forEach((producto) => {
+        const productoEnCarrito = document.createElement('div')
+        productoEnCarrito.classList.add('products')
+        productoEnCarrito.setAttribute('data-id', producto.id)
+        productoEnCarrito.innerHTML = `
+        <img class="cardImg" src="${producto.img} " class="card-img-top" alt="${producto.nombre}" style="width:80px;height: 80px;">
+          <h5 class="card-name">${producto.nombre}</h5>
+          <p class="card-precio">${producto.precio}</p>
+          <button class="btnQuitar btn-primary">Quitar del carrito</button> 
+        `
+        cardProductos.append(productoEnCarrito)
+    })
+
+
+    document.querySelectorAll('.cardProductos').forEach((button) => {
+        button.addEventListener('click', eliminarProducto)
+    })
+} 
+
+const eliminarProducto = (e) => {
+    const productoIdSeleccionado = e.target.closest('.cardProductos').getAttribute('data-id')
+    carritoDeCompras = carritoDeCompras.filter((producto) => producto.id != productoIdSeleccionado)
+    guardarEnStorage('carritoDeCompras', carritoDeCompras)
+    ProductosEnCarrito ()
+}*/
+
+btnAgregar.forEach((button) => {
+    button.addEventListener('click', renderizarDatosProductos)
+})
+
+const getTodoslosproductos = async () => {
+    const response = await fetch('../jsondata/productos.json')
+    const data = await response.json()
+    ProductosFarmacia = data
+}
+
+getTodoslosproductos()
+
+
+const buscarProducto = () => {
+    const query = searchBar.value.toLowerCase()
+    const arrayResultados = ProductosFarmacia.filter((producto) => producto.nombre.toLowerCase().includes(query))
+    getTodoslosproductos(arrayResultados)
+}
+
+//ProductosEnCarrito()
+
+//buttonCpra.addEventListener('click', ProductosEnCarrito)
+searchButton.addEventListener('click', buscarProducto)
+searchBar.addEventListener('input', buscarProducto)
+
+/*if (localStorage.getItem('carritoDeCompras')) {
+    carritoDeCompras = JSON.parse(localStorage.getItem('carritoDeCompras'))
+    ProductosEnCarrito()
+}*/
+
+
+
+
+
+
+
+
+//const renderizarListaProductos = () => {
+//     productoSeleccionado.forEach((ProductoFarmacia) => {
+//        const botonCompra = document.createElement('button')
+ //       botonCompra.innerHTML = `
+//        <button class="buttonCpra" id="btn6"> Agregar al Carrito </button>
+//        `
+ //       productoSeleccionado.append(botonCompra)
+ //   });
+//
+//    {/**/ }
+//}
+
+
+
+
+
+
+
+
+
+
+
+//renderizarListaProductos()
+
+
+
+
+/*<img class="cardImg" src=" " class="card-img-top" alt="...">
+    <div class="card-body">
+          <h5 class="card-name">Producto seleccionado</h5>
+          <p class="card-precio">Precio</p>
+     <button class="buttonCpra btnQuitar btn-primary">Quitar del carrito</button> 
+     </div>*/

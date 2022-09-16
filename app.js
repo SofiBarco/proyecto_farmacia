@@ -14,7 +14,7 @@ const cardPrecio = document.querySelector('.card-precio')
 
 const searchBar = document.querySelector('#searchBar')
 const searchButton = document.querySelector('#searchButton')
-
+const cardProductos = document.querySelector('.cardProductos')
 const btnQuitar = document.querySelector('.btnQuitar')
 
 let carritoDeCompras = []
@@ -22,33 +22,47 @@ let carritoDeCompras = []
 const renderizarDatosProductos = (e) => {
     const productoIdSeleccionado = e.target.closest('.buttonCpra').getAttribute('data-id')
     const productoElegido = ProductosFarmacia.find((producto) => producto.id == productoIdSeleccionado)
-
-
     if (localStorage.getItem('carritoDeCompras')) {
-
         carritoDeCompras = JSON.parse(localStorage.getItem('carritoDeCompras'))
     } else {
         carritoDeCompras = []
-    }
-
+    } 
+   
     carritoDeCompras.push(productoIdSeleccionado)
-
+   
     localStorage.setItem('carritoDeCompras', JSON.stringify(carritoDeCompras))
-
+        
     const todosLosProductosGuardado = JSON.parse(localStorage.getItem('carritoDeCompras'))
     console.log(todosLosProductosGuardado)
 
-    cardImg.setAttribute('src', productoElegido.img)
-    cardName.textContent = productoElegido.nombre
-    cardPrecio.textContent = `$ ${productoElegido.precio}`
+    const nuevoProducto = document.createElement('div')
+    nuevoProducto.innerHTML = `
+    <img class="cardImg" src="${productoElegido.img}" class="card-img-top" alt="${productoElegido.nombre}" style="width:80px;height: 80px;">
+    <h5 class="card-name">${productoElegido.nombre}</h5>
+    <p class="card-precio"> $ ${productoElegido.precio}</p>
+    <button class="btnQuitar btn-primary">Quitar del carrito</button> 
+    `
+    nuevoProducto.className = 'cardProductos'
+    cardProductos.append(nuevoProducto)
 
+    
+    const sumarTotal = carritoDeCompras.reduce ( (acc, precioProducto) =>{
+      return acc = acc + precioProducto 
+    },)  
 
+    console.log(sumarTotal)
 }
 
 
+
+
 btnAgregar.forEach((button) => {
-    button.addEventListener('click', renderizarDatosProductos)
+    button.addEventListener('click', renderizarDatosProductos) 
+    //button.addEventListener('clik', )
+    
 })
+
+    
 
 const getTodoslosproductos = async () => {
     const response = await fetch('../jsondata/productos.json')
@@ -65,6 +79,7 @@ const buscarProducto = () => {
     getTodoslosproductos(arrayResultados)
 }
 
+
 searchButton.addEventListener('click', buscarProducto)
 searchBar.addEventListener('input', buscarProducto)
 
@@ -72,41 +87,10 @@ searchBar.addEventListener('input', buscarProducto)
 
 
 
-
-
-
-
-
-//const renderizarListaProductos = () => {
-//     productoSeleccionado.forEach((ProductoFarmacia) => {
-//        const botonCompra = document.createElement('button')
- //       botonCompra.innerHTML = `
-//        <button class="buttonCpra" id="btn6"> Agregar al Carrito </button>
-//        `
- //       productoSeleccionado.append(botonCompra)
- //   });
-//
-//    {/**/ }
-//}
-
-
-
-
-
-
-
-
-
-
-
-//renderizarListaProductos()
-
-
-
-
-/*<img class="cardImg" src=" " class="card-img-top" alt="...">
-    <div class="card-body">
-          <h5 class="card-name">Producto seleccionado</h5>
-          <p class="card-precio">Precio</p>
-     <button class="buttonCpra btnQuitar btn-primary">Quitar del carrito</button> 
-     </div>*/
+/*
+<img class="cardImg" src=" " class="card-img-top" alt="..." style="width:80px;height: 80px;">
+    <h5 class="card-name">Producto seleccionado</h5>
+    <p class="card-precio">Precio</p>
+    <button class="btnQuitar btn-primary">Quitar del carrito</button> 
+        
+*/

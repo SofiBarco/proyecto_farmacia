@@ -69,6 +69,13 @@
 }
 }
 
+.carrito {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+   
+}
+
 div#imagen1 {
     background-color: map-get($colors, color-secundario);
     grid-column: 1 / 2;
